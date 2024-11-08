@@ -11,7 +11,12 @@ const questions = [
 const answers = []
 
 //loop
+// for (let i = 0; i < questions.length; i++) {
+//     const answer = prompt(questions[i])
+//     answers.push(answer)
+// }
 
+// alert(answers)
 
 // ========================
 
@@ -21,6 +26,22 @@ const answers = []
 
 const num = [2,5,9,10,23]
 
+function getNum(numAry) {
+    const noOdd = numAry.filter(function(number){
+        return number % 2 === 0
+    })
+
+    console.log('noOdd:', noOdd)
+
+    const multiNum = noOdd.map(function(number){
+        return number*3
+    })
+
+    return multiNum
+}
+
+// console.log(getNum(num))
+
 
 // ==========================
 
@@ -28,6 +49,18 @@ const num = [2,5,9,10,23]
 
 const words = ["cat", "pizza", "javascript"]
 
+const getWord = function(wordAry) {
+    let currentWord = ''
+    wordAry.forEach(function(word){
+        if(currentWord.length < word.length){
+            currentWord = word
+        }
+    })
+
+    return currentWord
+}
+
+// console.log(getWord(words))
 
 // ==============================
 
@@ -37,7 +70,22 @@ const words = ["cat", "pizza", "javascript"]
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
+const removeVowels = function(word) {
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    const wordAry = word.toLowerCase().split('').filter(function(letter) {
+        return letter !== ' '
+    })
+    console.log('wordAry', wordAry)
 
+    const noVowles = wordAry.filter(function(letter) {
+        return !vowels.includes(letter)
+    })
+    console.log('noVowels', noVowles)
+
+    return noVowles.join('')
+}
+
+console.log(removeVowels('The Batman'))
 
 // ===================
 
