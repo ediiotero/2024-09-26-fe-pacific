@@ -76,7 +76,7 @@ function myFunction() {
 
 // console.log(carName)
 
-// myFunction()
+myFunction()
   
   // code here can NOT use carName
 
