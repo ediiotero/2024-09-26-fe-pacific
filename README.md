@@ -31,3 +31,4 @@
 ```
 - run server with `npx json-server db.json`
 - You should be able to make a `GET` call to `http://localhost:3000/articles`
+- Hold `ctrl` and hit `c` to turn off the server
