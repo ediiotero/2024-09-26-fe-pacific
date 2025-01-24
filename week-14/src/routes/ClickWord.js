@@ -5,7 +5,6 @@
 // and display the new word in the DOM
 import React, { Component } from 'react'
 
-
 const WordProp = props => {
   return (
     <div>WordProp</div>
