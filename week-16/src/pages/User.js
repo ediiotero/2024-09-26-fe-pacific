@@ -6,7 +6,7 @@ const User = () => {
     const {userid} = useParams()
     const [user, setUser] = useState({})
     const navigate = useNavigate()
-
+  //test for conflict
     const fetchUser = async () => {
         const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userid}`)
         const data = await res.json()
